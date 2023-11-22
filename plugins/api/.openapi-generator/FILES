@@ -1,5 +1,4 @@
 .gitignore
-.openapi-generator-ignore
 .travis.yml
 README.md
 analysis_options.yaml
@@ -40,16 +39,3 @@ lib/model/page_employee_response.dart
 lib/model/pageable_object.dart
 lib/model/sort_object.dart
 pubspec.yaml
-test/auth_api_test.dart
-test/customer_request_test.dart
-test/customer_response_test.dart
-test/employee_controller_api_test.dart
-test/employee_request_test.dart
-test/employee_response_test.dart
-test/khch_hng_api_test.dart
-test/login_request_test.dart
-test/login_response_test.dart
-test/page_customer_response_test.dart
-test/page_employee_response_test.dart
-test/pageable_object_test.dart
-test/sort_object_test.dart

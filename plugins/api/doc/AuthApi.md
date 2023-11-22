@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 
 # **checkLogin**
-> checkLogin()
+> bool checkLogin()
 
 
 
@@ -26,7 +26,8 @@ import 'package:openapi/api.dart';
 final api_instance = AuthApi();
 
 try {
-    api_instance.checkLogin();
+    final result = api_instance.checkLogin();
+    print(result);
 } catch (e) {
     print('Exception when calling AuthApi->checkLogin: $e\n');
 }
@@ -37,7 +38,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-void (empty response body)
+**bool**
 
 ### Authorization
 
@@ -46,7 +47,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

@@ -43,7 +43,8 @@ import 'package:openapi/api.dart';
 final api_instance = AuthApi();
 
 try {
-    api_instance.checkLogin();
+    final result = api_instance.checkLogin();
+    print(result);
 } catch (e) {
     print('Exception when calling AuthApi->checkLogin: $e\n');
 }
