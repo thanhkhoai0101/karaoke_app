@@ -24,18 +24,13 @@ class _SplashScreenLoadState extends State<SplashScreenLoad> {
     super.initState();
     const Duration(seconds: 5);
     SchedulerBinding.instance.scheduleFrameCallback((timeStamp) async {
-      SharedPreferences sharedPreferences =
-      await SharedPreferences.getInstance();
+      SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
       if (sharedPreferences.containsKey('token')) {
-        var response = await authApi.checkLoginWithHttpInfo();
-        print("taone troi oi ${response.statusCode}");
-        if (response.statusCode == 401 || response.statusCode == 403) {
+        var response = await authApi.checkLogin();
+        if (!response!) {
           Navigator.of(context).pushReplacement(
               MaterialPageRoute(builder: (context) => LoginScreen()));
-
-          print(response.statusCode);
-        } else {
-          print("else ne ");
+        }else {
           Navigator.of(context).pushReplacement(
               MaterialPageRoute(builder: (context) => HomePage()));
         }
